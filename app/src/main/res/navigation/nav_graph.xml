@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.LoginFragment"
+        android:label="Login">
+        <action android:id="@+id/action_login_to_registro" app:destination="@id/registroClienteFragment"/>
+        <action android:id="@+id/action_login_to_promos"   app:destination="@id/promosFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registroClienteFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.RegistroClienteFragment"
+        android:label="Registro cliente">
+        <action android:id="@+id/action_registro_to_promos" app:destination="@id/promosFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/promosFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.PromosFragment"
+        android:label="Promociones">
+        <action android:id="@+id/action_promos_to_detalle" app:destination="@id/detallePromoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detallePromoFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.DetallePromoFragment"
+        android:label="Detalle promoción">
+        <action android:id="@+id/action_detalle_to_regFactura" app:destination="@id/registroFacturaFragment"/>
+        <action android:id="@+id/action_detalle_to_listado"    app:destination="@id/listadoFacturasFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registroFacturaFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.RegistroFacturaFragment"
+        android:label="Registrar factura">
+        <action android:id="@+id/action_regFactura_to_detalle" app:destination="@id/detallePromoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/listadoFacturasFragment"
+        android:name="com.fruiz.app_promocionv2.ui.page.ListadoFacturasFragment"
+        android:label="Facturas">
+        <action android:id="@+id/action_listado_to_detalle" app:destination="@id/detallePromoFragment"/>
+    </fragment>
+</navigation>

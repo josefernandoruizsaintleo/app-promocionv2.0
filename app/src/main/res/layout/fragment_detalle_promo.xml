@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="24dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button android:id="@+id/btnBack" android:text="Volver" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:text="Oportunidades acumuladas" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:id="@+id/tvOportunidades" android:text="0" android:textSize="32sp"
+        android:layout_marginTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnRegistrarFactura" android:text="Registrar factura"
+        android:layout_marginTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnVerFacturas" android:text="Ver facturas"
+        android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
