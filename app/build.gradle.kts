@@ -67,4 +67,7 @@ dependencies {
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore.ktx)
 
+    implementation(libs.androidx.lifecycle.runtime.ktx.v284)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.recyclerview)
 }

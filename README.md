@@ -55,4 +55,8 @@ Funcionalidad de navegacion exitosa.
 Se logra realizar conexion a FireBase mediante pruebas con usuario anonimo utilizando los servicios
 Auth y FireStore. Se valida en la consola de FireBase.
 
+Funcionalidad completa, creacion de usuario, login de usuario, mostrar promociones activas, 
+registrar facturas, listar facturas ingresadas, mostrar puntos acumulados. 
+Todo almacenado por cada usuario registrado en la base de FireBase.
+
 
