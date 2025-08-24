@@ -9,6 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.fruiz.app_promocionv2.R
 import com.fruiz.app_promocionv2.databinding.FragmentLoginBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
@@ -22,10 +27,32 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         binding.btnContinuar.setOnClickListener {
-            Toast.makeText(requireContext(), "Ir a Promos", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.promosFragment)   // ← destino directo
+            // 1) Auth anónima
+            Firebase.auth.signInAnonymously()
+                .addOnSuccessListener {
+                    // 2) Escritura de prueba en Firestore
+                    val data = mapOf(
+                        "screen" to "login",
+                        "ts" to FieldValue.serverTimestamp(),
+                        "ok" to true
+                    )
+                    Firebase.firestore.collection("debug").add(data)
+                        .addOnSuccessListener {
+                            Toast.makeText(requireContext(), "Firestore OK ✅", Toast.LENGTH_SHORT).show()
+                            // Si quieres, aquí ya navegas a Promos:
+                            // findNavController().navigate(R.id.promosFragment)
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(requireContext(), "Firestore ERROR: ${e.message}", Toast.LENGTH_LONG).show()
+                        }
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(requireContext(), "Auth ERROR: ${e.message}", Toast.LENGTH_LONG).show()
+                }
         }
+
         binding.btnIrRegistro.setOnClickListener {
             Toast.makeText(requireContext(), "Ir a Registro", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.registroClienteFragment) // ← destino directo

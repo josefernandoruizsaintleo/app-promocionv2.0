@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "779130714372",
+    "project_id": "app-cc-saintleo",
+    "storage_bucket": "app-cc-saintleo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779130714372:android:81acb179208633bb9ff851",
+        "android_client_info": {
+          "package_name": "com.fruiz.app_promocionv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPUZn471vsMF68sEw8bD61xdhYYjv9ZUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
