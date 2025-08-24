@@ -1,13 +1,57 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:padding="24dp"
+    <LinearLayout
+        android:orientation="vertical" android:padding="16dp"
         android:layout_width="match_parent" android:layout_height="wrap_content">
-        <Button android:id="@+id/btnBack" android:text="Volver" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:text="Registro de factura" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <EditText android:id="@+id/etLocal"  android:hint="Local participante" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <EditText android:id="@+id/etNumero" android:hint="Nro. documento"   android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <EditText android:id="@+id/etFecha"  android:hint="Fecha"            android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <EditText android:id="@+id/etMonto"  android:hint="Monto" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <Button android:id="@+id/btnGuardarFactura" android:text="Guardar" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack" android:text="Volver"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Registro de factura" android:textStyle="bold" android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Local participante" android:layout_marginTop="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLocal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Nro. documento" android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNumero"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Fecha (opcional)" android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFecha"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Monto" android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMonto"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarFactura"
+            android:text="Guardar"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
     </LinearLayout>
+
 </ScrollView>

@@ -1,21 +1,46 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="16dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical" android:padding="16dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <Button android:id="@+id/btnBack" android:text="Volver"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack" android:text="Volver"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
-    <TextView android:id="@+id/tvTitulo" android:textStyle="bold"
-        android:text="Detalle promoción" android:textSize="18sp"
-        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvTitulo" android:textStyle="bold" android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-    <TextView android:text="Oportunidades acumuladas" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <TextView android:id="@+id/tvOportunidades" android:text="0" android:textSize="32sp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+            <LinearLayout
+                android:orientation="vertical" android:padding="16dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView
+                    android:text="Oportunidades acumuladas"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvOportunidades" android:text="0" android:textSize="34sp"
+                    android:textStyle="bold" android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <Button android:id="@+id/btnRegistrarFactura" android:text="Registrar factura"
-        android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarFactura" android:text="Registrar factura"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-    <Button android:id="@+id/btnVerFacturas" android:text="Ver facturas"
-        android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerFacturas" android:text="Ver facturas"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -59,4 +59,6 @@ Funcionalidad completa, creacion de usuario, login de usuario, mostrar promocion
 registrar facturas, listar facturas ingresadas, mostrar puntos acumulados. 
 Todo almacenado por cada usuario registrado en la base de FireBase.
 
+## Cambio de diseño
 
+Se aplicaron cambios en el diseño de las pantallas para darle una mejora apariencia.
