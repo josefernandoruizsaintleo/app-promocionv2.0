@@ -9,6 +9,15 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent" android:layout_height="wrap_content">
 
+        <!-- Logo superior -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_app" />
+
         <TextView
             android:text="Iniciar sesión" android:textSize="22sp"
             android:textStyle="bold"
