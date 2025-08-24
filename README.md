@@ -50,4 +50,9 @@ Se agrega el activity Login y los otros fragments al proyecto, se cargan depende
 
 Funcionalidad de navegacion exitosa.
 
+## Conexion a FireBase
+
+Se logra realizar conexion a FireBase mediante pruebas con usuario anonimo utilizando los servicios
+Auth y FireStore. Se valida en la consola de FireBase.
+
 
